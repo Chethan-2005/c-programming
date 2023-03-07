@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void fibonacci(int n);
+
+int main() {
+    int n;
+
+    printf("Enter the number of terms in the Fibonacci series: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Invalid input! Number of terms should be a positive integer.\n");
+    } else {
+        printf("The first %d terms of the Fibonacci series are:\n", n);
+        fibonacci(n);
+    }
+
+    return 0;
+}
+
+void fibonacci(int n) {
+    int i, t1 = 0, t2 = 1, next_term;
+
+    for (i = 1; i <= n; i++) {
+        printf("%d ", t1);
+        next_term = t1 + t2;
+        t1 = t2;
+        t2 = next_term;
+    }
+}

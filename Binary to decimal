@@ -4,7 +4,7 @@ int convert(long long);
 int main()
 {
  long long n;
- printf("ENTER THE BINARY NUMBER: ");
+ printf("Enter the binary number : ");
  scanf("%lld",& n);
  printf("%lld in binary = %d in decimal", n,convert(n));
  return 0;
